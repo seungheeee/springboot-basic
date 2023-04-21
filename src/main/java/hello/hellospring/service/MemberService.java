@@ -5,6 +5,7 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +14,7 @@ import java.util.Optional;
 //서비스단은 비지니스 로직에 가까운 이름으로 메서드명을 지음
 
 //service 어노테이션을 붙여주면 spring이 알 수 없는 단순 자바 코드였던 것이 스프링이 실행될 때 컨테이너에 등록이 됨
+@Transactional
 public class MemberService {
 
     //private final MemberRepository memberRepository = new MemoryMemberRepository();
